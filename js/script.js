@@ -25,4 +25,22 @@ $(document).ready(function(){
 		$("#show-this-on-click").slideUp(200);
 		$(".readmore").toggle();
 	}
+
+	$(".learnmore").click(aboutMore);
+
+	function aboutMore(){
+		event.preventDefault();
+		$(".learnmore").toggle();
+		$("#learnmoretext").slideDown(150);
+		$(".learnless").toggle();
+	}
+
+	$(".learnless").click(aboutLess);
+
+	function aboutLess(){
+		event.preventDefault();
+		$(".learnless").toggle();
+		$("#learnmoretext").slideUp(150);
+		$(".learnmore").toggle();
+	}
 });
